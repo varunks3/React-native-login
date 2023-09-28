@@ -6,6 +6,7 @@ const conncetDB = require("./config/database");
 const authRoutes = require('./routes/authRoutes');
 const protedRoutes = require('./routes/protectedRoutes');
 const otpRoute = require('./routes/otpRoute');
+const searchRoute = require('./routes/searchRoute');
 const cors = require("cors");
 const bodyParser = require('body-parser');
 const passwordResetRoute = require("./routes/passwordResetRoute");
@@ -19,9 +20,8 @@ app.use('/', authRoutes);
 app.use('/', protedRoutes);
 app.use('/', otpRoute); // you can remove this if you don't want otpRoute file
 app.use('/', passwordResetRoute);
-
+app.use('/', searchRoute)
 app.use(bodyParser.json());
-
 
 app.listen(port, () => {
   console.log(`Server running on port ${port}`);
