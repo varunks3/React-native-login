@@ -6,18 +6,18 @@ import SignUp from "./components/SignUp";
 import Home from "./components/Home";
 import ForgetPassword from "./components/ForgetPassword";
 import ResetPassword from "./components/ResetPassword";
-
-
+import Search from "./components/Search";
 
   
 const Stack = createNativeStackNavigator();
 export default function App() {
   return (
     <NavigationContainer>
-      <Stack.Navigator initialRouteName="SignIn">
+      <Stack.Navigator initialRouteName="Search">
         <Stack.Screen name="SignUp" component={SignUp} />
         <Stack.Screen name="SignIn" component={SignIn} />
         <Stack.Screen name="Home" component={Home} />
+        <Stack.Screen name="Search" component={Search} />
         <Stack.Screen name="ForgetPassword" component={ForgetPassword} />
         <Stack.Screen name="ResetPassword" component={ResetPassword} />
       </Stack.Navigator>
