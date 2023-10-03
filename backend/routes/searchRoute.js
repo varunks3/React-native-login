@@ -1,9 +1,12 @@
 const express = require("express");
+const app = express();
 const Data = require("../models/data");
 const Image = require("../models/image")
 const router = express.Router();
 const multer = require('multer');
+const cors = require("cors");
 
+app.use(cors())  
 router.post("/add_data", async (req, res) => {
   try {
     const data = new Data({
