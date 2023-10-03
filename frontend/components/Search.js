@@ -20,7 +20,7 @@ const Search = () => {
   useEffect(() => {
     async function fetch_data() {
       try {
-        let res = await axios.get("http://10.0.2.2:8080/images");
+        let res = await axios.get("https://react-native-login-backend.vercel.app/images");
         setFilteredData(res.data);
         setAllData(res.data);
       } catch (error) {
