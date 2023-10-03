@@ -89,7 +89,7 @@ const Search = () => {
         />
         <Button
           onPress={() => setisGridView(!isGridView)}
-          title="Toggle"
+          title={isGridView ? 'Switch to List View' : 'Switch to Grid View'}
           color="#841584"
         />
         {isGridView ? (
